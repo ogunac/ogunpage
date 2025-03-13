@@ -12,7 +12,7 @@
     href="favicon.png"
   />
 
-  <!-- Hoja de estilos principal con la paleta de colores de OGUN A.C. -->
+  <!-- Hoja de estilos principal con la paleta y ajustes responsive -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- Swiper's CSS (CDN) -->
@@ -24,7 +24,6 @@
 <body>
   <!-- ENCABEZADO -->
   <header>
-    <!-- Logotipo en PNG con fondo transparente -->
     <img src="logo-ogun.png" alt="Logotipo OGUN A.C." />
     <nav>
       <ul>
@@ -75,12 +74,11 @@
       </p>
     </section>
 
-    <!-- SECCIÓN: Galería de Fotos con Swiper -->
+    <!-- SECCIÓN: Galería con Swiper -->
     <section>
       <h2>Galería de Actividades</h2>
-      <!-- Contenedor principal de Swiper -->
+      <!-- Componente Swiper -->
       <div class="swiper mySwiper">
-        <!-- Slides wrapper -->
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide">
@@ -118,10 +116,10 @@
             />
           </div>
         </div>
-        <!-- Botones de navegación -->
+        <!-- Botones de navegación (flechas) -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <!-- Paginación -->
+        <!-- Paginación (puntitos) -->
         <div class="swiper-pagination"></div>
       </div>
 
@@ -169,6 +167,7 @@
         el: '.swiper-pagination',
         clickable: true
       }
+      // Si deseas auto-play, descomenta:
       // autoplay: {
       //   delay: 3000,
       //   disableOnInteraction: false,
