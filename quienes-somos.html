@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>OGUN A.C. - Quiénes Somos</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="favicon.png"
+  />
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+  <!-- ENCABEZADO -->
   <header>
-    <img src="logo-ogun.jpg" alt="Logotipo OGUN A.C.">
+    <img src="logo-ogun.png" alt="Logotipo OGUN A.C." />
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -22,30 +32,114 @@
     </nav>
   </header>
 
+  <!-- CONTENEDOR PRINCIPAL -->
   <div class="container">
+    <!-- SECCIÓN 1: Quiénes Somos -->
     <section>
-      <h1>Quiénes Somos</h1>
-      <p>La Organización General de Unidad Nacional A.C. se fundó en 2005 con el firme propósito 
-         de impactar positivamente la vida de las comunidades más vulnerables. A lo largo de 
-         estos años, hemos desarrollado programas de capacitación para el trabajo, salud, 
-         cultura y alimentación.</p>
+      <h1>¿Quiénes Somos?</h1>
+      <div class="flex-row">
+        <!-- Imagen representativa -->
+        <div class="flex-item">
+          <img
+            src="imagenes/quienes-somos1.jpg"
+            alt="Fotografía representativa de la asociación"
+          />
+        </div>
+        <!-- Texto -->
+        <div class="flex-item">
+          <p>
+            La <strong>Organización General de Unidad Nacional A.C.</strong> es una 
+            asociación civil fundada en 2005 con el propósito de impulsar el 
+            desarrollo integral de las comunidades más vulnerables. A través de 
+            talleres, programas de capacitación, jornadas de salud y proyectos 
+            culturales, contribuimos a mejorar la calidad de vida de niñas, niños, 
+            jóvenes, mujeres y personas mayores en diversas regiones del país.
+          </p>
+          <p>
+            Nuestro compromiso se basa en la participación comunitaria, la 
+            solidaridad y la formación de redes de apoyo que hagan posible la 
+            transformación social. ¡Conócenos y únete a nuestra labor!
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <!-- SECCIÓN 2: Nuestra Estructura -->
+    <section>
       <h2>Nuestra Estructura</h2>
-      <p>OGUN A.C. está integrada por un equipo directivo, personal de apoyo y voluntarios 
-         comprometidos. Contamos con una asamblea de asociados que dan rumbo a las 
-         acciones de la asociación.</p>
+      <div class="flex-row reverse">
+        <!-- Texto -->
+        <div class="flex-item">
+          <p>
+            Contamos con un <strong>Consejo Directivo</strong> conformado por 
+            especialistas y líderes comunitarios que orientan las acciones de la 
+            organización. Además, un equipo multidisciplinario de profesionales 
+            y voluntarios se encarga de ejecutar los programas en campo, establecer 
+            alianzas con otras instituciones y brindar seguimiento a los proyectos 
+            en curso.
+          </p>
+          <p>
+            Este esquema de trabajo nos permite consolidar un modelo de gestión 
+            transparente, eficiente y cercano a la gente, sumando esfuerzos para 
+            generar cambios positivos en las comunidades.
+          </p>
+        </div>
+        <!-- Imagen representativa -->
+        <div class="flex-item">
+          <img
+            src="imagenes/quienes-estructura.jpg"
+            alt="Representación de la estructura organizacional"
+          />
+        </div>
+      </div>
+    </section>
 
+    <!-- SECCIÓN 3: Bloques para redireccionar a subpáginas -->
+    <section>
       <h2>Más Sobre Nosotros</h2>
-      <ul>
-        <li><a href="historia.html">Historia</a></li>
-        <li><a href="mision-vision-valores.html">Misión, Visión y Valores</a></li>
-      </ul>
+      <!-- Contenedor de cards (historia, misión-visión) -->
+      <div class="subpage-links">
+        <!-- Card 1: Historia -->
+        <div class="card">
+          <img
+            src="imagenes/quienes-historia.jpg"
+            alt="Imagen representando nuestra historia"
+          />
+          <div class="card-content">
+            <h3>Historia</h3>
+            <p>
+              Conoce nuestro recorrido desde el año 2005, los proyectos 
+              que han marcado un antes y un después en las comunidades...
+            </p>
+            <a href="historia.html" class="btn-primario">Leer más</a>
+          </div>
+        </div>
+        <!-- Card 2: Misión, Visión y Valores -->
+        <div class="card">
+          <img
+            src="imagenes/quienes-mision.jpg"
+            alt="Imagen representando misión y visión"
+          />
+          <div class="card-content">
+            <h3>Misión, Visión y Valores</h3>
+            <p>
+              Descubre los pilares que rigen nuestro trabajo, 
+              nuestros objetivos a futuro y los valores que nos guían...
+            </p>
+            <a href="mision-vision-valores.html" class="btn-primario"
+              >Leer más</a
+            >
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 
+  <!-- PIE DE PÁGINA -->
   <footer>
     <p>© 2025 OGUN A.C. - Todos los derechos reservados</p>
   </footer>
 
+  <!-- Scripts adicionales (si es necesario) -->
 </body>
 </html>
