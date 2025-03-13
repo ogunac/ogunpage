@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>OGUN A.C. - Programas</title>
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="favicon.png"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
-    <img src="logo-ogun.jpg" alt="Logotipo OGUN A.C.">
+    <img src="logo-ogun.png" alt="Logotipo OGUN A.C." />
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+        <li><a href="historia.html">Nuestra Historia</a></li>
         <li><a href="programas.html" class="active">Programas</a></li>
         <li><a href="noticias.html">Noticias</a></li>
         <li><a href="voluntariado.html">Voluntariado</a></li>
@@ -26,37 +37,91 @@
     <h1>Programas y Proyectos</h1>
     <section>
       <h2>Talleres de Manualidades</h2>
-      <a name="proyecto-manualidades"></a>
-      <p>
-        Capacitaciones orientadas a mujeres y jóvenes, enfocadas en la elaboración de prendas, 
-        bisutería, etc. (Más detalles, fotos, etc.)
-      </p>
+      <div class="flex-row">
+        <div class="flex-item">
+          <img
+            src="imagenes/programas-manualidades.jpg"
+            alt="Talleres de manualidades"
+            class="responsive-img"
+          />
+        </div>
+        <div class="flex-item">
+          <p>
+            Capacitaciones orientadas a mujeres y jóvenes para la elaboración de
+            prendas y artesanías...
+          </p>
+        </div>
+      </div>
     </section>
 
     <section>
       <h2>Abasto y Distribución de Alimentos</h2>
-      <a name="proyecto-abasto"></a>
-      <p>
-        Semanalmente se distribuyen paquetes de alimentos con el apoyo de “Alimento para 
-        Todos IAP”. (Más detalles.)
-      </p>
+      <div class="flex-row reverse">
+        <div class="flex-item">
+          <p>
+            Semanalmente se entregan paquetes alimenticios gracias a alianzas 
+            con bancos de alimentos, mejorando la nutrición de familias.
+          </p>
+        </div>
+        <div class="flex-item">
+          <img
+            src="imagenes/programas-alimentos.jpg"
+            alt="Distribución de alimentos"
+            class="responsive-img"
+          />
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>“Músicos de Acero”</h2>
-      <a name="proyecto-musicos"></a>
-      <p>
-        Proyecto cultural que fomenta la participación de jóvenes en bandas musicales, 
-        promoviendo la creatividad y el trabajo en equipo. (Más detalles.)
-      </p>
+      <h2>Jornadas de Salud y Medicina Alternativa</h2>
+      <div class="flex-row">
+        <div class="flex-item">
+          <img
+            src="imagenes/programas-salud.jpg"
+            alt="Jornadas de salud"
+            class="responsive-img"
+          />
+        </div>
+        <div class="flex-item">
+          <p>
+            En colaboración con profesionales de la salud tradicional y alternativa,
+            ofrecemos atención integral y promoción de estilos de vida saludables.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- Agrega más secciones de programas aquí -->
+    <section>
+      <h2>Músicos de Acero</h2>
+      <div class="flex-row reverse">
+        <div class="flex-item">
+          <p>
+            Proyecto cultural para fomentar la expresión musical juvenil a través
+            de talleres, formación de bandas y conciertos.
+          </p>
+        </div>
+        <div class="flex-item">
+          <img
+            src="imagenes/programas-musicos.jpg"
+            alt="Músicos de Acero"
+            class="responsive-img"
+          />
+        </div>
+      </div>
+    </section>
   </div>
 
   <footer>
     <p>© 2025 OGUN A.C. - Todos los derechos reservados</p>
   </footer>
 
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>
