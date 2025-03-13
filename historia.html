@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>OGUN A.C. - Nuestra Historia</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Nuestro style.css con la paleta actualizada -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Swiper's CSS (CDN) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css"
+  />
 </head>
 <body>
-
+  <!-- ENCABEZADO -->
   <header>
-    <img src="logo-ogun.jpg" alt="Logotipo OGUN A.C.">
+    <img src="logo-ogun.jpg" alt="Logotipo OGUN A.C." />
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="quienes-somos.html" class="active">Quiénes Somos</a></li>
+        <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+        <li><a href="historia.html" class="active">Nuestra Historia</a></li>
         <li><a href="programas.html">Programas</a></li>
         <li><a href="noticias.html">Noticias</a></li>
         <li><a href="voluntariado.html">Voluntariado</a></li>
@@ -23,18 +31,110 @@
   </header>
 
   <div class="container">
+    <!-- SECCION: Semblanza histórica / texto -->
     <section>
       <h1>Nuestra Historia</h1>
       <p>
-        OGUN A.C. nació en mayo de 2005 como resultado de la inquietud de un grupo de 
-        profesionales y voluntarios comprometidos con el bienestar comunitario. 
-        Inicialmente, la asociación se enfocó en impartir talleres de manualidades y 
-        cursos de verano para niños. Con el paso del tiempo...
+        La <strong>Organización General de Unidad Nacional A.C.</strong> se fundó en mayo 
+        de 2005 y desde entonces ha desarrollado diversos talleres, proyectos, 
+        cursos y programas dirigidos a niños, jóvenes, mujeres y comunidades en 
+        situación vulnerable. Entre sus primeras actividades destacan los <em>
+        talleres de manualidades, corte y confección</em>, así como <em>cursos de 
+        capacitación para la práctica del estilismo</em> y <em>cursos de verano</em> 
+        enfocados en el desarrollo creativo de la niñez.
       </p>
       <p>
-        (Incluye aquí una línea cronológica o más detalles de hitos relevantes a lo largo 
-        de los años.)
+        A lo largo de los años, OGUN A.C. ha impulsado iniciativas de gran alcance 
+        como el <em>programa de abasto y distribución de paquetes alimenticios</em> 
+        —en coordinación con el Banco de Alimentos “Alimento para Todos IAP”—, 
+        <em>jornadas de salud y medicina alternativa</em>, y <em>proyectos de desarrollo 
+        rural</em> con instituciones federales (SAGARPA, INCARURAL). Además, 
+        ha ejecutado proyectos culturales como <strong>“Músicos de Acero”</strong>, 
+        fomentando la expresión musical juvenil, y ha llevado capacitaciones y talleres 
+        de productividad a productores en zonas rurales de Oaxaca, Tlaxcala y área 
+        rural de la CDMX.
       </p>
+      <p>
+        Gracias a sus resultados, en 2014 OGUN A.C. obtuvo la <strong>autorización 
+        para ser donataria</strong> por parte del SAT. Con el paso del tiempo, 
+        se ha fortalecido en distintas convocatorias (INADEM, PRONAFIM, INDESOL), 
+        beneficiando a cientos de emprendedores y sumándose a esfuerzos de 
+        dotación de útiles escolares, mejoramiento de vivienda, educación emocional 
+        y defensa de los derechos de la niñez y la mujer.
+      </p>
+    </section>
+
+    <!-- SECCIÓN: Galería con Swiper -->
+    <section>
+      <h2>Galería de Actividades</h2>
+
+      <!-- Componente Swiper -->
+      <div class="swiper mySwiper">
+        <!-- Slides wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <img
+              src="imagenes/hist1.jpg"
+              alt="Actividad 1: Taller de manualidades"
+            />
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img
+              src="imagenes/hist2.jpg"
+              alt="Actividad 2: Distribución de alimentos"
+            />
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <img
+              src="imagenes/hist3.jpg"
+              alt="Actividad 3: Cursos de verano con niños"
+            />
+          </div>
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <img
+              src="imagenes/hist4.jpg"
+              alt="Actividad 4: Jornadas de salud"
+            />
+          </div>
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <img
+              src="imagenes/hist5.jpg"
+              alt="Actividad 5: Músicos de Acero"
+            />
+          </div>
+        </div>
+        <!-- Botones de navegación (opcional) -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Paginación (opcional) -->
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <p>
+        En estas imágenes se muestran algunas de nuestras actividades más 
+        representativas: manualidades, apoyo alimenticio, proyectos culturales 
+        y más, reflejando el compromiso de OGUN A.C. con el desarrollo integral 
+        de la comunidad.
+      </p>
+    </section>
+
+    <!-- VALORES FUNDAMENTALES -->
+    <section>
+      <h2>Valores Fundamentales</h2>
+      <ul>
+        <li><strong>Solidaridad</strong>: Apoyo genuino a quien más lo necesita.</li>
+        <li><strong>Respeto</strong>: Trato digno y equitativo para todas las personas.</li>
+        <li><strong>Honestidad</strong>: Transparencia en nuestras acciones y uso de recursos.</li>
+        <li><strong>Compromiso</strong>: Trabajo constante en beneficio de la sociedad.</li>
+        <li><strong>Integridad</strong>: Principios éticos y morales en toda la labor.</li>
+        <li><strong>Autenticidad</strong>: Ser fieles a nuestra identidad y objetivos, 
+          actuando con coherencia y transparencia.</li>
+      </ul>
     </section>
   </div>
 
@@ -42,5 +142,32 @@
     <p>© 2025 OGUN A.C. - Todos los derechos reservados</p>
   </footer>
 
+  <!-- Swiper's JS (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+
+  <!-- Inicialización de Swiper -->
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+      // Ajustes básicos
+      loop: true,              // el slider dará la vuelta al llegar al final
+      slidesPerView: 1,        // muestras 1 imagen por slide
+      spaceBetween: 10,
+      // Opciones de navegación
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      // Paginación (puntitos)
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      // Puedes añadir "autoplay" si deseas que corra solo
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
+    });
+  </script>
 </body>
 </html>
