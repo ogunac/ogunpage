@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>OGUN A.C. - Contacto</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>OGUN A.C. - Transparencia</title>
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="favicon.png"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
-    <img src="logo-ogun.jpg" alt="Logotipo OGUN A.C.">
+    <img src="logo-ogun.png" alt="Logotipo OGUN A.C." />
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+        <li><a href="historia.html">Nuestra Historia</a></li>
         <li><a href="programas.html">Programas</a></li>
         <li><a href="noticias.html">Noticias</a></li>
         <li><a href="voluntariado.html">Voluntariado</a></li>
-        <li><a href="transparencia.html">Transparencia</a></li>
-        <li><a href="contacto.html" class="active">Contacto</a></li>
+        <li><a href="transparencia.html" class="active">Transparencia</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <div class="container">
-    <h1>Contacto</h1>
+    <h1>Transparencia</h1>
     <p>
-      Si deseas mayor información, colaborar como donante o voluntario, o simplemente 
-      hacernos llegar tus comentarios, escríbenos.
-    </p>
-    <p>
-      <strong>Teléfono:</strong> (55) 8974-8690 <br>
-      <strong>Correo general:</strong> <a href="mailto:contacto@ogunac.org">contacto@ogunac.org</a><br>
-      <strong>Dirección:</strong> Calle Elisa Acuña y Rossety, Mz. 172, Lt. 17, Col. Sta. Martha Acatitla, Iztapalapa, CDMX.
+      En OGUN A.C. estamos comprometidos con la rendición de cuentas. A 
+      continuación, encontrarás informes, reportes y documentos que avalan 
+      nuestras actividades y el manejo de recursos.
     </p>
 
-    <form action="#" method="post">
-      <label for="nombre">Nombre:</label><br>
-      <input type="text" id="nombre" name="nombre" required><br><br>
+    <section>
+      <h2>Informes Anuales</h2>
+      <ul>
+        <li><a href="documentos/InformeAnual2024.pdf" target="_blank">Informe Anual 2024 (PDF)</a></li>
+        <li><a href="documentos/InformeAnual2023.pdf" target="_blank">Informe Anual 2023 (PDF)</a></li>
+      </ul>
+    </section>
 
-      <label for="email">Correo electrónico:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
-
-      <label for="mensaje">Mensaje:</label><br>
-      <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
-
-      <button type="submit" class="btn-primario">Enviar</button>
-    </form>
+    <section>
+      <h2>Autorizaciones y Reconocimientos</h2>
+      <ul>
+        <li><a href="documentos/AutorizacionDonataria.pdf" target="_blank">Autorización como Donataria (PDF)</a></li>
+      </ul>
+    </section>
   </div>
 
   <footer>
     <p>© 2025 OGUN A.C. - Todos los derechos reservados</p>
   </footer>
 
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>
