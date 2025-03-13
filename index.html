@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>OGUN A.C. - Inicio</title>
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="favicon.png"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- ENCABEZADO -->
   <header>
-    <img src="logo-ogun.jpg" alt="Logotipo OGUN A.C.">
+    <img src="logo-ogun.png" alt="Logotipo OGUN A.C." />
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html" class="active">Inicio</a></li>
         <li><a href="quienes-somos.html">Quiénes Somos</a></li>
         <li><a href="programas.html">Programas</a></li>
         <li><a href="noticias.html">Noticias</a></li>
@@ -23,45 +32,65 @@
     </nav>
   </header>
 
-  <!-- SECCIÓN HERO O PORTADA -->
-  <section class="hero">
-    <h1>Bienvenidos a OGUN A.C.</h1>
-    <p>Desde 2005, impulsando el desarrollo integral de las comunidades, brindando apoyo 
-       a niños, jóvenes, mujeres y adultos mayores a través de programas de educación, 
-       capacitación y participación ciudadana.</p>
-    <a href="quienes-somos.html" class="btn-primario">Conócenos</a>
-  </section>
-
-  <!-- CONTENEDOR PRINCIPAL -->
   <div class="container">
     <section>
-      <h2>Nuestra Labor</h2>
-      <p>
-        OGUN A.C. trabaja en diversas regiones implementando talleres de manualidades, 
-        cursos de estilismo, apoyo alimenticio, jornadas de salud y mucho más. Nuestro objetivo 
-        es crear oportunidades y fortalecer el tejido social.
-      </p>
+      <h1>Bienvenidos a OGUN A.C.</h1>
+      <div class="flex-row">
+        <div class="flex-item">
+          <p>
+            Somos una asociación civil fundada en 2005 con el objetivo de 
+            promover el desarrollo integral en comunidades vulnerables. 
+            A través de proyectos de capacitación, cultura, salud y educación, 
+            buscamos mejorar la calidad de vida de niñas, niños, jóvenes y adultos.
+          </p>
+          <p>
+            Explora nuestras secciones para conocer más sobre nuestros 
+            programas, historia y logros. ¡Gracias por visitarnos!
+          </p>
+          <a href="quienes-somos.html" class="btn-primario">Conócenos</a>
+        </div>
+        <div class="flex-item">
+          <img
+            src="imagenes/index-portada.jpg"
+            alt="Imagen principal de OGUN A.C."
+            class="responsive-img"
+          />
+        </div>
+      </div>
     </section>
 
     <section>
       <h2>Programas Destacados</h2>
-      <p>Conoce algunos de nuestros proyectos más representativos:</p>
-      <ul>
-        <li><a href="programas.html#proyecto-manualidades">Talleres de manualidades</a></li>
-        <li><a href="programas.html#proyecto-abasto">Abasto y distribución de alimentos</a></li>
-        <li><a href="programas.html#proyecto-musicos">Proyecto “Músicos de Acero”</a></li>
-      </ul>
+      <div class="flex-row reverse">
+        <div class="flex-item">
+          <img
+            src="imagenes/index-programas.jpg"
+            alt="Actividades de los programas"
+            class="responsive-img"
+          />
+        </div>
+        <div class="flex-item">
+          <p>
+            Desde talleres de manualidades y estilismo, hasta jornadas de salud 
+            y distribución de alimentos, nuestros programas buscan ofrecer 
+            oportunidades y apoyo directo a las comunidades.
+          </p>
+          <a href="programas.html" class="btn-primario">Ver Programas</a>
+        </div>
+      </div>
     </section>
   </div>
 
-  <!-- PIE DE PÁGINA -->
   <footer>
     <p>© 2025 Organización General de Unidad Nacional A.C.</p>
-    <p>
-      <a href="index.html">Inicio</a> |
-      <a href="contacto.html">Contacto</a>
-    </p>
   </footer>
 
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>
