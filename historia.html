@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <title>OGUN A.C. - Nuestra Historia</title>
-  <!-- Nuestro style.css con la paleta actualizada -->
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="favicon.png"
+  />
+
+  <!-- Hoja de estilos principal con la paleta de colores de OGUN A.C. -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- Swiper's CSS (CDN) -->
@@ -15,7 +24,8 @@
 <body>
   <!-- ENCABEZADO -->
   <header>
-    <img src="logo-ogun.jpg" alt="Logotipo OGUN A.C." />
+    <!-- Logotipo en PNG con fondo transparente -->
+    <img src="logo-ogun.png" alt="Logotipo OGUN A.C." />
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -30,8 +40,9 @@
     </nav>
   </header>
 
+  <!-- CONTENEDOR PRINCIPAL -->
   <div class="container">
-    <!-- SECCION: Semblanza histórica / texto -->
+    <!-- SECCIÓN: Semblanza histórica -->
     <section>
       <h1>Nuestra Historia</h1>
       <p>
@@ -64,11 +75,10 @@
       </p>
     </section>
 
-    <!-- SECCIÓN: Galería con Swiper -->
+    <!-- SECCIÓN: Galería de Fotos con Swiper -->
     <section>
       <h2>Galería de Actividades</h2>
-
-      <!-- Componente Swiper -->
+      <!-- Contenedor principal de Swiper -->
       <div class="swiper mySwiper">
         <!-- Slides wrapper -->
         <div class="swiper-wrapper">
@@ -108,10 +118,10 @@
             />
           </div>
         </div>
-        <!-- Botones de navegación (opcional) -->
+        <!-- Botones de navegación -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <!-- Paginación (opcional) -->
+        <!-- Paginación -->
         <div class="swiper-pagination"></div>
       </div>
 
@@ -123,7 +133,7 @@
       </p>
     </section>
 
-    <!-- VALORES FUNDAMENTALES -->
+    <!-- SECCIÓN: Valores Fundamentales -->
     <section>
       <h2>Valores Fundamentales</h2>
       <ul>
@@ -138,31 +148,27 @@
     </section>
   </div>
 
+  <!-- PIE DE PÁGINA -->
   <footer>
     <p>© 2025 OGUN A.C. - Todos los derechos reservados</p>
   </footer>
 
   <!-- Swiper's JS (CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
-
   <!-- Inicialización de Swiper -->
   <script>
     var swiper = new Swiper('.mySwiper', {
-      // Ajustes básicos
-      loop: true,              // el slider dará la vuelta al llegar al final
-      slidesPerView: 1,        // muestras 1 imagen por slide
+      loop: true,
+      slidesPerView: 1,
       spaceBetween: 10,
-      // Opciones de navegación
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
       },
-      // Paginación (puntitos)
       pagination: {
         el: '.swiper-pagination',
         clickable: true
-      },
-      // Puedes añadir "autoplay" si deseas que corra solo
+      }
       // autoplay: {
       //   delay: 3000,
       //   disableOnInteraction: false,
