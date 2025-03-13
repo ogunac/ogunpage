@@ -1,44 +1,48 @@
-/* style.css */
+/* =========================================================
+   style.css
+   Versión adaptada a la paleta de colores OGUN A.C.
+   ========================================================= */
 
-/* ===========================
+/* ---------------------------
    RESET Y CONFIGURACIÓN BÁSICA
-   =========================== */
+   --------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333333; /* Gris oscuro */
-  background: #FFFFFF; /* Fondo blanco */
+  color: #333333; /* Se sugiere usar el Gris Oscuro como color primario de texto */
+  background-color: #FFFFFF; /* Fondo principal en blanco */
 }
 
-/* ===========================
-   COLORES (Basado en el logo OGUN A.C.)
-   Ajusta según necesidad
-   =========================== */
+/* ---------------------------
+   COLORES PRINCIPALES 
+   --------------------------- */
 :root {
-  --color-primario: #1E3A56;    /* Azul marino principal */
-  --color-secundario: #F0C75E;  /* Dorado/Amarillo suave */
+  --color-azul-marino: #1E3A56;
+  --color-dorado-claro: #F0C75E;
+  --color-beige: #F9E5C2;
   --color-blanco: #FFFFFF;
   --color-gris-oscuro: #333333;
-  --color-gris-claro: #F0F0F0;
 }
 
-/* ===========================
+/* ---------------------------
    ENCABEZADO (HEADER)
-   =========================== */
+   --------------------------- */
 header {
-  background: var(--color-primario);
-  padding: 1rem 2rem;
+  background-color: var(--color-azul-marino);
+  color: var(--color-blanco);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 2rem;
 }
 header img {
-  height: 50px;
+  height: 50px; /* Ajusta según necesites */
 }
 nav ul {
   list-style: none;
@@ -52,21 +56,24 @@ nav li a {
   transition: color 0.3s ease;
 }
 nav li a:hover {
-  color: var(--color-secundario);
+  color: var(--color-dorado-claro);
 }
 
-/* ===========================
-   SECCIONES GENÉRICAS
-   =========================== */
+/* ---------------------------
+   ESTILOS DE SECCIONES GENÉRICAS
+   --------------------------- */
 .container {
   max-width: 1200px;
-  margin: 1rem auto;
-  padding: 0 1rem;
+  margin: 0 auto;
+  padding: 1rem;
 }
+
+/* Títulos */
 h1, h2, h3 {
-  color: var(--color-primario);
+  color: var(--color-azul-marino);
   margin-bottom: 0.5rem;
 }
+
 section {
   margin-bottom: 2rem;
 }
@@ -75,11 +82,74 @@ p {
   text-align: justify;
 }
 
-/* ===========================
-   FOOTER (PIE DE PÁGINA)
-   =========================== */
+/* ---------------------------
+   BOTONES / ENLACES ESPECIALES
+   --------------------------- */
+.btn-primario {
+  background-color: var(--color-dorado-claro);
+  color: var(--color-azul-marino);
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-primario:hover {
+  background-color: #E6B851; /* Un tono más oscuro del dorado */
+}
+
+/* ---------------------------
+   SECCIÓN HERO
+   --------------------------- */
+.hero {
+  background-color: var(--color-dorado-claro);
+  color: var(--color-azul-marino);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  margin: 0 auto 1rem auto;
+  max-width: 700px;
+}
+
+/* ---------------------------
+   SECCIONES CON FONDO BEIGE
+   (Puedes usarlo para bloques destacados)
+   --------------------------- */
+.bg-beige {
+  background-color: var(--color-beige);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+}
+
+/* ---------------------------
+   ESTILOS ESPECÍFICOS PARA LISTAS, ETC.
+   --------------------------- */
+ul {
+  margin-left: 1.5rem;
+  list-style: disc;
+}
+
+/* ---------------------------
+   IMÁGENES
+   --------------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------------------------
+   PIE DE PÁGINA (FOOTER)
+   --------------------------- */
 footer {
-  background: var(--color-primario);
+  background-color: var(--color-azul-marino);
   color: var(--color-blanco);
   text-align: center;
   padding: 1rem;
@@ -91,50 +161,21 @@ footer a {
   margin: 0 0.5rem;
 }
 footer a:hover {
-  color: var(--color-secundario);
+  color: var(--color-dorado-claro);
 }
 
-/* ===========================
-   BOTONES / LINKS ESPECIALES
-   =========================== */
-.btn-primario {
-  background: var(--color-secundario);
-  color: var(--color-primario);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.btn-primario:hover {
-  background: #e6b851; /* Tono ligeramente más oscuro del dorado */
-}
-
-/* ===========================
-   EJEMPLO DE ESTILOS EXTRA
-   =========================== */
-/* Ajustes para imágenes responsivas */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Pequeño estilo para una sección hero */
-.hero {
-  background: var(--color-secundario);
-  padding: 2rem;
-  text-align: center;
-  color: var(--color-primario);
-  margin-bottom: 2rem;
-}
-.hero h1 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
-.hero p {
-  margin-bottom: 1rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+/* ---------------------------
+   MEDIA QUERIES (RESPONSIVE)
+   --------------------------- */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+  }
+  nav ul {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .container {
+    padding: 1rem;
+  }
 }
