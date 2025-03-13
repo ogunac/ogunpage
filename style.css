@@ -115,11 +115,27 @@ ul {
   border-radius: 6px;
   overflow: hidden;
 }
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: auto;
+/* =========================
+   Ajustes para la galería Swiper
+   ========================= */
+
+/* Contenedor de cada slide */
+.swiper-slide {
+  display: flex;              /* Flexbox para centrar */
+  align-items: center;        /* Centrado vertical */
+  justify-content: center;    /* Centrado horizontal */
+  background: var(--color-blanco); /* O el color de fondo que desees */
 }
+
+/* Ajuste de las imágenes */
+.swiper-slide img {
+  max-width: 100%;      /* Que no excedan el ancho del contenedor */
+  max-height: 400px;    /* Ajusta a la altura deseada */
+  object-fit: cover;     /* Recorta la imagen si sobrepasa el contenedor */
+  display: block;
+  margin: 0 auto;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   color: var(--color-dorado-claro);
@@ -134,6 +150,7 @@ ul {
 .swiper-pagination-bullet-active {
   background: #e6b851;
 }
+
 
 /* =====================================================
    PIE DE PÁGINA (FOOTER)
