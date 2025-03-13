@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>OGUN A.C. - Noticias</title>
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="favicon.png"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
-    <img src="logo-ogun.jpg" alt="Logotipo OGUN A.C.">
+    <img src="logo-ogun.png" alt="Logotipo OGUN A.C." />
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+        <li><a href="historia.html">Nuestra Historia</a></li>
         <li><a href="programas.html">Programas</a></li>
         <li><a href="noticias.html" class="active">Noticias</a></li>
         <li><a href="voluntariado.html">Voluntariado</a></li>
@@ -23,32 +34,51 @@
   </header>
 
   <div class="container">
-    <h1>Noticias</h1>
+    <h1>Noticias y Eventos</h1>
 
     <article>
       <h2>Concluye con éxito el Curso de Verano 2025</h2>
-      <p><em>Fecha: 20 de Julio de 2025</em></p>
+      <p><em>Fecha: 20 julio 2025</em></p>
+      <img
+        src="imagenes/noticias-verano.jpg"
+        alt="Curso de Verano"
+        class="responsive-img"
+      />
       <p>
-        Más de 80 niños y niñas participaron en las actividades recreativas, culturales 
-        y deportivas impartidas por voluntarios. <a href="noticia-curso-verano.html">Leer más</a>
+        Más de 100 niños y niñas participaron en actividades artísticas, lúdicas 
+        y recreativas, con el apoyo de voluntarios. 
       </p>
     </article>
+    <hr />
 
     <article>
       <h2>Jornada de Salud Integral en Iztapalapa</h2>
-      <p><em>Fecha: 10 de Junio de 2025</em></p>
+      <p><em>Fecha: 15 junio 2025</em></p>
+      <img
+        src="imagenes/noticias-salud.jpg"
+        alt="Jornada de Salud Integral"
+        class="responsive-img"
+      />
       <p>
-        Con el apoyo de la Facultad de Medicina Tradicional, se brindaron más de 200 
-        atenciones médicas gratuitas a la comunidad. <a href="noticia-salud-integral.html">Leer más</a>
+        Egresados de la Universidad de Morelos ofrecieron consultas y terapias 
+        de medicina alternativa, beneficiando a 200 personas.
       </p>
     </article>
-    
-    <!-- Más noticias o listados -->
+    <hr />
+
+    <!-- Más noticias si lo deseas -->
   </div>
 
   <footer>
     <p>© 2025 OGUN A.C. - Todos los derechos reservados</p>
   </footer>
 
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>
