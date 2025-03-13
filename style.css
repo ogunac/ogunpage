@@ -178,4 +178,47 @@ footer a:hover {
   .container {
     padding: 1rem;
   }
+   /* style.css */
+/* ... el resto de tu CSS previo ... */
+
+/* ----------------------------------------
+   SWIPER PERSONALIZADO
+   ---------------------------------------- */
+/* Ajustar el contenedor principal de la galería (Swiper). 
+   Por defecto, Swiper define .swiper, .swiper-wrapper, .swiper-slide, 
+   .swiper-button-next, .swiper-button-prev, etc. */
+
+.swiper {
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem auto;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Botones (flechas) con colores de la paleta */
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-dorado-claro);
+  /* Ajusta si deseas un fondo o sombras */
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #e6b851; /* Tono un poco más oscuro */
+}
+
+/* Paginación (puntos) */
+.swiper-pagination-bullet {
+  background: var(--color-dorado-claro);
+}
+.swiper-pagination-bullet-active {
+  background: #e6b851;
+}
+
 }
