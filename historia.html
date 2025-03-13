@@ -151,28 +151,36 @@
     <p>© 2025 OGUN A.C. - Todos los derechos reservados</p>
   </footer>
 
-  <!-- Swiper's JS (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
-  <!-- Inicialización de Swiper -->
-  <script>
-    var swiper = new Swiper('.mySwiper', {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      }
-      // Si deseas auto-play, descomenta:
-      // autoplay: {
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      // },
-    });
-  </script>
+<!-- Swiper's JS (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+
+<script>
+  var swiper = new Swiper('.mySwiper', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+
+    /* Efecto fade: transiciones suaves entre imágenes */
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    speed: 800, 
+    /* Velocidad de transición en milisegundos (ajusta según desees) */
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false
+    // },
+  });
+</script>
 </body>
 </html>
