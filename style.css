@@ -1,8 +1,10 @@
-/* =====================================================
-   style.css - Versión adaptada para responsive design
-   ===================================================== */
+/* =================================================================
+   style.css 
+   Proyecto OGUN A.C. 
+   Paleta y diseño responsivo con menú hamburguesa
+   ================================================================= */
 
-/* RESET Y CONFIGURACIÓN BÁSICA */
+/* RESET y CONFIGURACIÓN BÁSICA */
 * {
   margin: 0;
   padding: 0;
@@ -16,9 +18,9 @@ body {
   background-color: #FFFFFF;
 }
 
-/* =====================================================
+/* =================================================================
    PALETA DE COLORES (OGUN A.C.)
-   ===================================================== */
+   ================================================================= */
 :root {
   --color-azul-marino: #1E3A56;
   --color-dorado-claro: #F0C75E;
@@ -27,23 +29,28 @@ body {
   --color-gris-oscuro: #333333;
 }
 
-/* =====================================================
-   ENCABEZADO (HEADER)
-   ===================================================== */
+/* =================================================================
+   ENCABEZADO (HEADER) + MENÚ
+   ================================================================= */
 header {
   background-color: var(--color-azul-marino);
   color: var(--color-blanco);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
+  position: relative;
 }
 
 header img {
-  height: 50px; /* Ajustar según necesidad */
+  height: 50px; /* Ajusta según necesidad */
   flex-shrink: 0;
 }
 
+/* Menu principal */
+nav {
+  position: relative;
+}
 nav ul {
   list-style: none;
   display: flex;
@@ -62,9 +69,22 @@ nav li a.active {
   text-decoration: underline;
 }
 
-/* =====================================================
-   ESTRUCTURA PRINCIPAL
-   ===================================================== */
+/* Botón hamburguesa (oculto en desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--color-blanco);
+}
+
+/* =================================================================
+   CONTENEDOR PRINCIPAL
+   ================================================================= */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -73,7 +93,9 @@ nav li a.active {
 
 h1, h2, h3 {
   color: var(--color-azul-marino);
+  margin-bottom: 0.75rem;
 }
+
 p {
   margin-bottom: 1rem;
   text-align: justify;
@@ -84,13 +106,11 @@ section {
 }
 
 ul {
-  margin-left: 1.5rem;
   list-style: disc;
+  margin-left: 1.5rem;
 }
 
-/* =====================================================
-   BOTONES
-   ===================================================== */
+/* Botón primario */
 .btn-primario {
   background-color: var(--color-dorado-claro);
   color: var(--color-azul-marino);
@@ -99,105 +119,26 @@ ul {
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none; /* Para links que usen la clase */
+  display: inline-block;
+  transition: background-color 0.3s;
 }
 .btn-primario:hover {
   background-color: #e6b851;
 }
 
-/* =====================================================
-   SWIPER (GALERÍA) 
-   ===================================================== */
-/* Clases por defecto de Swiper: .swiper, .swiper-wrapper, .swiper-slide, etc. */
-.swiper {
+/* Imagenes con borde redondeado */
+.responsive-img {
   width: 100%;
-  max-width: 800px; /* En pantallas grandes no sobrepasará 800px */
-  margin: 1rem auto;
-  border-radius: 6px;
-  overflow: hidden;
-}
-/* =========================
-   Ajustes para la galería Swiper
-   ========================= */
-
-/* Contenedor de cada slide */
-.swiper-slide {
-  display: flex;              /* Flexbox para centrar */
-  align-items: center;        /* Centrado vertical */
-  justify-content: center;    /* Centrado horizontal */
-  background: var(--color-blanco); /* O el color de fondo que desees */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
-/* Ajuste de las imágenes */
-.swiper-slide img {
-  max-width: 100%;      /* Que no excedan el ancho del contenedor */
-  max-height: 400px;    /* Ajusta a la altura deseada */
-  object-fit: cover;     /* Recorta la imagen si sobrepasa el contenedor */
-  display: block;
-  margin: 0 auto;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: var(--color-dorado-claro);
-}
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: #e6b851;
-}
-.swiper-pagination-bullet {
-  background: var(--color-dorado-claro);
-}
-.swiper-pagination-bullet-active {
-  background: #e6b851;
-}
-
-
-/* =====================================================
-   PIE DE PÁGINA (FOOTER)
-   ===================================================== */
-footer {
-  background-color: var(--color-azul-marino);
-  color: var(--color-blanco);
-  text-align: center;
-  padding: 1rem;
-}
-footer a {
-  color: var(--color-blanco);
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-footer a:hover {
-  color: var(--color-dorado-claro);
-}
-
-/* =====================================================
-   MEDIA QUERIES - ADAPTACIONES MOBILE
-   ===================================================== */
-
-/* En pantallas <= 768px (tablets y teléfonos),
-   reorganizamos el header y la navegación */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  header img {
-    margin-bottom: 0.75rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .container {
-    padding: 0.5rem;
-  }
-   /* =======================================================
-   Clases para el layout de secciones con texto e imagen
-   ======================================================= */
+/* =================================================================
+   CARDS, FLEX, GRID UTILS
+   ================================================================= */
+/* Para secciones con imagen+texto en fila */
 .flex-row {
   display: flex;
   gap: 1rem;
@@ -205,32 +146,23 @@ footer a:hover {
   margin-bottom: 2rem;
 }
 .flex-row.reverse {
-  flex-direction: row-reverse; /* Imagen a la derecha, texto a la izquierda */
+  flex-direction: row-reverse;
 }
 .flex-item {
   flex: 1;
 }
-.flex-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
 
-/* =======================================================
-   Cards (para Historia y Misión, Visión, Valores)
-   ======================================================= */
+/* Bloques de subpáginas (cards) */
 .subpage-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
-  margin-top: 1rem;
 }
 .card {
   background-color: var(--color-beige);
   border-radius: 8px;
-  overflow: hidden;
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -248,24 +180,99 @@ footer a:hover {
 .card-content p {
   margin-bottom: 1rem;
 }
-.card-content .btn-primario {
-  text-decoration: none;
-  display: inline-block;
+
+/* =================================================================
+   SWIPER (para slides) - opcional en páginas que lo requieran
+   ================================================================= */
+.swiper {
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem auto;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-blanco);
+}
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-dorado-claro);
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #e6b851;
+}
+.swiper-pagination-bullet {
+  background: var(--color-dorado-claro);
+}
+.swiper-pagination-bullet-active {
+  background: #e6b851;
 }
 
-/* =======================================================
-   Media Query para pantallas pequeñas
-   ======================================================= */
-@media (max-width: 768px) {
-  .flex-row {
+/* =================================================================
+   PIE DE PÁGINA (FOOTER)
+   ================================================================= */
+footer {
+  background-color: var(--color-azul-marino);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 1rem;
+}
+footer a {
+  color: var(--color-blanco);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+footer a:hover {
+  color: var(--color-dorado-claro);
+}
+
+/* =================================================================
+   MEDIA QUERIES
+   ================================================================= */
+@media (max-width: 900px) {
+  /* Encabezado: Mostrar hamburguesa, ocultar menú principal en horizontal */
+  nav ul {
+    position: absolute;
+    top: 64px; /* Altura del header */
+    right: 0;
+    background: var(--color-azul-marino);
+    flex-direction: column;
+    width: 200px;
+    gap: 1rem;
+    padding: 1rem;
+    display: none; /* Por defecto, oculto en móvil */
+  }
+  .hamburger {
+    display: flex; /* Mostrar icono hamburguesa en móvil */
+  }
+  header {
+    flex-wrap: wrap;
+  }
+  .flex-row, .flex-row.reverse {
     flex-direction: column;
   }
-  .flex-row.reverse {
-    flex-direction: column-reverse;
-  }
-  .flex-item {
-    margin-bottom: 1rem;
-  }
 }
 
+/* Clase auxiliar para mostrar/ocultar menú en móvil */
+.nav-open {
+  display: flex !important;
+}
+
+/* Ajustes de tarjetas y contenedor en pantallas pequeñas */
+@media (max-width: 600px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .card img {
+    height: 150px;
+  }
 }
