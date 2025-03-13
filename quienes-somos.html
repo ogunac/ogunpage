@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <title>OGUN A.C. - Quiénes Somos</title>
-
-  <!-- Favicon -->
   <link
     rel="icon"
     type="image/png"
     sizes="32x32"
     href="favicon.png"
   />
-
-  <!-- Hoja de estilos principal -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ENCABEZADO -->
   <header>
     <img src="logo-ogun.png" alt="Logotipo OGUN A.C." />
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -32,74 +32,66 @@
     </nav>
   </header>
 
-  <!-- CONTENEDOR PRINCIPAL -->
   <div class="container">
-    <!-- SECCIÓN 1: Quiénes Somos -->
+    <!-- Sección: ¿Quiénes Somos? -->
     <section>
       <h1>¿Quiénes Somos?</h1>
       <div class="flex-row">
-        <!-- Imagen representativa -->
         <div class="flex-item">
           <img
             src="imagenes/quienes-somos1.jpg"
-            alt="Fotografía representativa de la asociación"
+            alt="Integrantes de OGUN A.C."
+            class="responsive-img"
           />
         </div>
-        <!-- Texto -->
         <div class="flex-item">
           <p>
-            La <strong>Organización General de Unidad Nacional A.C.</strong> es una 
-            asociación civil fundada en 2005 con el propósito de impulsar el 
-            desarrollo integral de las comunidades más vulnerables. A través de 
-            talleres, programas de capacitación, jornadas de salud y proyectos 
-            culturales, contribuimos a mejorar la calidad de vida de niñas, niños, 
-            jóvenes, mujeres y personas mayores en diversas regiones del país.
+            La <strong>Organización General de Unidad Nacional A.C.</strong> es 
+            una asociación civil dedicada a promover la transformación social 
+            mediante proyectos de capacitación, educación, salud y cultura. 
+            Desde 2005, hemos impactado a cientos de personas de diversas 
+            comunidades del país.
           </p>
           <p>
-            Nuestro compromiso se basa en la participación comunitaria, la 
-            solidaridad y la formación de redes de apoyo que hagan posible la 
-            transformación social. ¡Conócenos y únete a nuestra labor!
+            Nuestra labor se basa en la solidaridad, la participación comunitaria 
+            y la gestión de oportunidades que fortalezcan el tejido social.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN 2: Nuestra Estructura -->
+    <!-- Sección: Estructura -->
     <section>
       <h2>Nuestra Estructura</h2>
       <div class="flex-row reverse">
-        <!-- Texto -->
         <div class="flex-item">
           <p>
-            Contamos con un <strong>Consejo Directivo</strong> conformado por 
-            especialistas y líderes comunitarios que orientan las acciones de la 
-            organización. Además, un equipo multidisciplinario de profesionales 
-            y voluntarios se encarga de ejecutar los programas en campo, establecer 
-            alianzas con otras instituciones y brindar seguimiento a los proyectos 
-            en curso.
+            Contamos con un <strong>Consejo Directivo</strong> que define la 
+            estrategia y los lineamientos de la asociación. Además, un equipo 
+            operativo integrado por profesionales y voluntarios lleva a cabo las 
+            actividades en campo, generando alianzas con instancias públicas y 
+            privadas para maximizar el alcance de nuestros programas.
           </p>
           <p>
-            Este esquema de trabajo nos permite consolidar un modelo de gestión 
-            transparente, eficiente y cercano a la gente, sumando esfuerzos para 
-            generar cambios positivos en las comunidades.
+            La <em>transparencia</em> y la <em>colaboración</em> son pilares 
+            fundamentales en nuestro modelo de trabajo.
           </p>
         </div>
-        <!-- Imagen representativa -->
         <div class="flex-item">
           <img
             src="imagenes/quienes-estructura.jpg"
-            alt="Representación de la estructura organizacional"
+            alt="Organigrama de OGUN A.C."
+            class="responsive-img"
           />
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN 3: Bloques para redireccionar a subpáginas -->
+    <!-- Sección: Bloques a subpáginas (Historia, Misión-Visión-Valores) -->
     <section>
       <h2>Más Sobre Nosotros</h2>
-      <!-- Contenedor de cards (historia, misión-visión) -->
       <div class="subpage-links">
-        <!-- Card 1: Historia -->
+        <!-- Card Historia -->
         <div class="card">
           <img
             src="imagenes/quienes-historia.jpg"
@@ -108,23 +100,23 @@
           <div class="card-content">
             <h3>Historia</h3>
             <p>
-              Conoce nuestro recorrido desde el año 2005, los proyectos 
-              que han marcado un antes y un después en las comunidades...
+              Descubre nuestro recorrido desde 2005, los proyectos más 
+              emblemáticos y cómo hemos crecido...
             </p>
             <a href="historia.html" class="btn-primario">Leer más</a>
           </div>
         </div>
-        <!-- Card 2: Misión, Visión y Valores -->
+        <!-- Card Misión, Visión y Valores -->
         <div class="card">
           <img
             src="imagenes/quienes-mision.jpg"
-            alt="Imagen representando misión y visión"
+            alt="Imagen representando misión y valores"
           />
           <div class="card-content">
             <h3>Misión, Visión y Valores</h3>
             <p>
-              Descubre los pilares que rigen nuestro trabajo, 
-              nuestros objetivos a futuro y los valores que nos guían...
+              Conoce los principios que rigen nuestro trabajo, las metas 
+              a futuro y el compromiso que asumimos cada día...
             </p>
             <a href="mision-vision-valores.html" class="btn-primario"
               >Leer más</a
@@ -135,11 +127,16 @@
     </section>
   </div>
 
-  <!-- PIE DE PÁGINA -->
   <footer>
     <p>© 2025 OGUN A.C. - Todos los derechos reservados</p>
   </footer>
 
-  <!-- Scripts adicionales (si es necesario) -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>
