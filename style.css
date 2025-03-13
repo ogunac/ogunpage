@@ -195,4 +195,77 @@ footer a:hover {
   .container {
     padding: 0.5rem;
   }
+   /* =======================================================
+   Clases para el layout de secciones con texto e imagen
+   ======================================================= */
+.flex-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.flex-row.reverse {
+  flex-direction: row-reverse; /* Imagen a la derecha, texto a la izquierda */
+}
+.flex-item {
+  flex: 1;
+}
+.flex-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* =======================================================
+   Cards (para Historia y Misión, Visión, Valores)
+   ======================================================= */
+.subpage-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.card {
+  background-color: var(--color-beige);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 1rem;
+}
+.card-content h3 {
+  margin-bottom: 0.5rem;
+}
+.card-content p {
+  margin-bottom: 1rem;
+}
+.card-content .btn-primario {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* =======================================================
+   Media Query para pantallas pequeñas
+   ======================================================= */
+@media (max-width: 768px) {
+  .flex-row {
+    flex-direction: column;
+  }
+  .flex-row.reverse {
+    flex-direction: column-reverse;
+  }
+  .flex-item {
+    margin-bottom: 1rem;
+  }
+}
+
 }
