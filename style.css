@@ -1,11 +1,8 @@
-/* =========================================================
-   style.css
-   Versión adaptada a la paleta de colores OGUN A.C.
-   ========================================================= */
+/* =====================================================
+   style.css - Versión adaptada para responsive design
+   ===================================================== */
 
-/* ---------------------------
-   RESET Y CONFIGURACIÓN BÁSICA
-   --------------------------- */
+/* RESET Y CONFIGURACIÓN BÁSICA */
 * {
   margin: 0;
   padding: 0;
@@ -15,13 +12,13 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333333; /* Se sugiere usar el Gris Oscuro como color primario de texto */
-  background-color: #FFFFFF; /* Fondo principal en blanco */
+  color: #333333; /* Gris oscuro */
+  background-color: #FFFFFF;
 }
 
-/* ---------------------------
-   COLORES PRINCIPALES 
-   --------------------------- */
+/* =====================================================
+   PALETA DE COLORES (OGUN A.C.)
+   ===================================================== */
 :root {
   --color-azul-marino: #1E3A56;
   --color-dorado-claro: #F0C75E;
@@ -30,9 +27,9 @@ body {
   --color-gris-oscuro: #333333;
 }
 
-/* ---------------------------
+/* =====================================================
    ENCABEZADO (HEADER)
-   --------------------------- */
+   ===================================================== */
 header {
   background-color: var(--color-azul-marino);
   color: var(--color-blanco);
@@ -41,9 +38,12 @@ header {
   justify-content: space-between;
   padding: 1rem 2rem;
 }
+
 header img {
-  height: 50px; /* Ajusta según necesites */
+  height: 50px; /* Ajustar según necesidad */
+  flex-shrink: 0;
 }
+
 nav ul {
   list-style: none;
   display: flex;
@@ -58,33 +58,39 @@ nav li a {
 nav li a:hover {
   color: var(--color-dorado-claro);
 }
+nav li a.active {
+  text-decoration: underline;
+}
 
-/* ---------------------------
-   ESTILOS DE SECCIONES GENÉRICAS
-   --------------------------- */
+/* =====================================================
+   ESTRUCTURA PRINCIPAL
+   ===================================================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* Títulos */
 h1, h2, h3 {
   color: var(--color-azul-marino);
-  margin-bottom: 0.5rem;
-}
-
-section {
-  margin-bottom: 2rem;
 }
 p {
   margin-bottom: 1rem;
   text-align: justify;
 }
 
-/* ---------------------------
-   BOTONES / ENLACES ESPECIALES
-   --------------------------- */
+section {
+  margin-bottom: 2rem;
+}
+
+ul {
+  margin-left: 1.5rem;
+  list-style: disc;
+}
+
+/* =====================================================
+   BOTONES
+   ===================================================== */
 .btn-primario {
   background-color: var(--color-dorado-claro);
   color: var(--color-azul-marino);
@@ -95,65 +101,48 @@ p {
   cursor: pointer;
 }
 .btn-primario:hover {
-  background-color: #E6B851; /* Un tono más oscuro del dorado */
+  background-color: #e6b851;
 }
 
-/* ---------------------------
-   SECCIÓN HERO
-   --------------------------- */
-.hero {
-  background-color: var(--color-dorado-claro);
-  color: var(--color-azul-marino);
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
-}
-.hero h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.hero p {
-  margin: 0 auto 1rem auto;
-  max-width: 700px;
-}
-
-/* ---------------------------
-   SECCIONES CON FONDO BEIGE
-   (Puedes usarlo para bloques destacados)
-   --------------------------- */
-.bg-beige {
-  background-color: var(--color-beige);
-  padding: 1rem;
-  margin-bottom: 2rem;
+/* =====================================================
+   SWIPER (GALERÍA) 
+   ===================================================== */
+/* Clases por defecto de Swiper: .swiper, .swiper-wrapper, .swiper-slide, etc. */
+.swiper {
+  width: 100%;
+  max-width: 800px; /* En pantallas grandes no sobrepasará 800px */
+  margin: 1rem auto;
   border-radius: 6px;
+  overflow: hidden;
 }
-
-/* ---------------------------
-   ESTILOS ESPECÍFICOS PARA LISTAS, ETC.
-   --------------------------- */
-ul {
-  margin-left: 1.5rem;
-  list-style: disc;
-}
-
-/* ---------------------------
-   IMÁGENES
-   --------------------------- */
-img {
-  max-width: 100%;
-  height: auto;
+.swiper-slide img {
   display: block;
+  width: 100%;
+  height: auto;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-dorado-claro);
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #e6b851;
+}
+.swiper-pagination-bullet {
+  background: var(--color-dorado-claro);
+}
+.swiper-pagination-bullet-active {
+  background: #e6b851;
 }
 
-/* ---------------------------
+/* =====================================================
    PIE DE PÁGINA (FOOTER)
-   --------------------------- */
+   ===================================================== */
 footer {
   background-color: var(--color-azul-marino);
   color: var(--color-blanco);
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
 }
 footer a {
   color: var(--color-blanco);
@@ -164,61 +153,29 @@ footer a:hover {
   color: var(--color-dorado-claro);
 }
 
-/* ---------------------------
-   MEDIA QUERIES (RESPONSIVE)
-   --------------------------- */
+/* =====================================================
+   MEDIA QUERIES - ADAPTACIONES MOBILE
+   ===================================================== */
+
+/* En pantallas <= 768px (tablets y teléfonos),
+   reorganizamos el header y la navegación */
 @media (max-width: 768px) {
   header {
-    flex-wrap: wrap;
-  }
-  nav ul {
     flex-direction: column;
-    margin-top: 1rem;
-  }
-  .container {
+    text-align: center;
     padding: 1rem;
   }
-   /* style.css */
-/* ... el resto de tu CSS previo ... */
 
-/* ----------------------------------------
-   SWIPER PERSONALIZADO
-   ---------------------------------------- */
-/* Ajustar el contenedor principal de la galería (Swiper). 
-   Por defecto, Swiper define .swiper, .swiper-wrapper, .swiper-slide, 
-   .swiper-button-next, .swiper-button-prev, etc. */
+  header img {
+    margin-bottom: 0.75rem;
+  }
 
-.swiper {
-  width: 100%;
-  max-width: 800px;
-  margin: 1rem auto;
-  border-radius: 6px;
-  overflow: hidden;
-}
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-.swiper-slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Botones (flechas) con colores de la paleta */
-.swiper-button-prev,
-.swiper-button-next {
-  color: var(--color-dorado-claro);
-  /* Ajusta si deseas un fondo o sombras */
-}
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  color: #e6b851; /* Tono un poco más oscuro */
-}
-
-/* Paginación (puntos) */
-.swiper-pagination-bullet {
-  background: var(--color-dorado-claro);
-}
-.swiper-pagination-bullet-active {
-  background: #e6b851;
-}
-
+  .container {
+    padding: 0.5rem;
+  }
 }
