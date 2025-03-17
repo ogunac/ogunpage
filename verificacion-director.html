@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificación de Identidad - Director General</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts (opcional, para tipografías más estilizadas) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <img src="logo-ogun.png" alt="Logotipo OGUN A.C.">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+        <li><a href="historia.html">Nuestra Historia</a></li>
+        <li><a href="programas.html">Programas</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="voluntariado.html">Voluntariado</a></li>
+        <li><a href="transparencia.html">Transparencia</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container">
+    <section class="verificacion">
+      <h1>Verificación de Identidad</h1>
+      <p>Esta página confirma la identidad de <strong>Marcos Tlacaelel Rivera Campos</strong> como <strong>Director General</strong> de la <strong>Organización General de Unidad Nacional A.C.</strong></p>
+
+      <!-- Contenedor de Identidad -->
+      <div class="id-card">
+        <div class="id-photo">
+          <img src="imagenes/marcos-rivera.jpg" alt="Marcos Tlacaelel Rivera Campos">
+        </div>
+        <div class="id-info">
+          <h2>Marcos Tlacaelel Rivera Campos</h2>
+          <h3>Director General</h3>
+          <p><strong>Correo:</strong> <a href="mailto:marcostlacaelel@oguac.org">marcostlacaelel@oguac.org</a></p>
+          <p><strong>Teléfono:</strong> (55) 8974-8690</p>
+          <p><strong>Ubicación:</strong> Elisa Acuña y Rossety, Mz. 172 Lt. 17, Col. Sta. Martha Acatitla, Iztapalapa, CDMX.</p>
+        </div>
+      </div>
+
+      <!-- Insignia de Autenticidad -->
+      <div class="auth-badge">
+        <img src="imagenes/insignia-verificacion.png" alt="Verificado por OGUN A.C.">
+        <p>Este perfil ha sido verificado oficialmente por OGUN A.C.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>© 2025 Organización General de Unidad Nacional A.C.</p>
+  </footer>
+
+  <!-- Script del Menú Responsivo -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-open');
+    });
+  </script>
+
+</body>
+</html>
