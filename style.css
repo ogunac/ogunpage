@@ -235,6 +235,7 @@ footer a:hover {
   color: var(--color-dorado-claro);
 }
 /* ===========================
+/* ===========================
    VERIFICACIÓN DE IDENTIDAD
    =========================== */
 .verificacion {
@@ -248,6 +249,9 @@ footer a:hover {
   margin-bottom: 1rem;
 }
 
+/* ===========================
+   TARJETA DE PERFIL
+   =========================== */
 .perfil {
   display: flex;
   flex-wrap: wrap;
@@ -264,12 +268,30 @@ footer a:hover {
   margin-right: auto;
 }
 
-.perfil-imagen img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+.perfil-imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MARCO DE LA IMAGEN */
+.imagen-marco {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  border: 5px solid var(--color-dorado-claro);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-blanco);
+  padding: 5px;
+}
+
+.imagen-marco img {
+  width: 100%;
+  height: auto;
   object-fit: cover;
-  border: 4px solid var(--color-dorado-claro);
 }
 
 .perfil-datos {
