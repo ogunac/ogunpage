@@ -1,0 +1,375 @@
+/* =================================================================
+   style.css 
+   Proyecto OGUN A.C. 
+   Paleta y diseño responsivo con menú hamburguesa
+   ================================================================= */
+
+/* RESET y CONFIGURACIÓN BÁSICA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333333; /* Gris oscuro */
+  background-color: #FFFFFF;
+}
+
+/* =================================================================
+   PALETA DE COLORES (OGUN A.C.)
+   ================================================================= */
+:root {
+  --color-azul-marino: #1E3A56;
+  --color-dorado-claro: #F0C75E;
+  --color-beige: #F9E5C2;
+  --color-blanco: #FFFFFF;
+  --color-gris-oscuro: #333333;
+}
+
+/* =================================================================
+   ENCABEZADO (HEADER) + MENÚ
+   ================================================================= */
+header {
+  background-color: var(--color-azul-marino);
+  color: var(--color-blanco);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+header img {
+  height: 50px; /* Ajusta según necesidad */
+  flex-shrink: 0;
+}
+
+/* Menu principal */
+nav {
+  position: relative;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+nav li a {
+  text-decoration: none;
+  color: var(--color-blanco);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav li a:hover {
+  color: var(--color-dorado-claro);
+}
+nav li a.active {
+  text-decoration: underline;
+}
+
+/* Botón hamburguesa (oculto en desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--color-blanco);
+}
+
+/* =================================================================
+   CONTENEDOR PRINCIPAL
+   ================================================================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1, h2, h3 {
+  color: var(--color-azul-marino);
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+/* Botón primario */
+.btn-primario {
+  background-color: var(--color-dorado-claro);
+  color: var(--color-azul-marino);
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none; /* Para links que usen la clase */
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+.btn-primario:hover {
+  background-color: #e6b851;
+}
+
+/* Imagenes con borde redondeado */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* =================================================================
+   CARDS, FLEX, GRID UTILS
+   ================================================================= */
+/* Para secciones con imagen+texto en fila */
+.flex-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.flex-row.reverse {
+  flex-direction: row-reverse;
+}
+.flex-item {
+  flex: 1;
+}
+
+/* Bloques de subpáginas (cards) */
+.subpage-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background-color: var(--color-beige);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 1rem;
+}
+.card-content h3 {
+  margin-bottom: 0.5rem;
+}
+.card-content p {
+  margin-bottom: 1rem;
+}
+
+/* =================================================================
+   SWIPER (para slides) - opcional en páginas que lo requieran
+   ================================================================= */
+.swiper {
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem auto;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-blanco);
+}
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-dorado-claro);
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #e6b851;
+}
+.swiper-pagination-bullet {
+  background: var(--color-dorado-claro);
+}
+.swiper-pagination-bullet-active {
+  background: #e6b851;
+}
+
+/* =================================================================
+   PIE DE PÁGINA (FOOTER)
+   ================================================================= */
+footer {
+  background-color: var(--color-azul-marino);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 1rem;
+}
+footer a {
+  color: var(--color-blanco);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+footer a:hover {
+  color: var(--color-dorado-claro);
+}
+/* ===========================
+/* ===========================
+   VERIFICACIÓN DE IDENTIDAD
+   =========================== */
+.verificacion {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.verificacion h1 {
+  font-size: 2rem;
+  color: var(--color-azul-marino);
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   TARJETA DE PERFIL
+   =========================== */
+.perfil {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--color-beige);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  margin-top: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.perfil-imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MARCO DE LA IMAGEN */
+.imagen-marco {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  border: 5px solid var(--color-dorado-claro);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-blanco);
+  padding: 5px;
+}
+
+.imagen-marco img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.perfil-datos {
+  text-align: left;
+}
+
+.perfil-datos h2 {
+  color: var(--color-azul-marino);
+  margin-bottom: 0.5rem;
+}
+
+.perfil-datos p {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}
+
+.perfil-datos a {
+  color: var(--color-azul-marino);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.certificacion {
+  margin-top: 2rem;
+  font-style: italic;
+  color: var(--color-gris-oscuro);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .perfil {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .perfil-datos {
+    text-align: center;
+  }
+}
+
+/* =================================================================
+   MEDIA QUERIES
+   ================================================================= */
+@media (max-width: 900px) {
+  /* Encabezado: Mostrar hamburguesa, ocultar menú principal en horizontal */
+  nav ul {
+    position: absolute;
+    top: 64px; /* Altura del header */
+    right: 0;
+    background: var(--color-azul-marino);
+    flex-direction: column;
+    width: 200px;
+    gap: 1rem;
+    padding: 1rem;
+    display: none; /* Por defecto, oculto en móvil */
+  }
+  .hamburger {
+    display: flex; /* Mostrar icono hamburguesa en móvil */
+  }
+  header {
+    flex-wrap: wrap;
+  }
+  .flex-row, .flex-row.reverse {
+    flex-direction: column;
+  }
+}
+
+/* Clase auxiliar para mostrar/ocultar menú en móvil */
+.nav-open {
+  display: flex !important;
+}
+
+/* Ajustes de tarjetas y contenedor en pantallas pequeñas */
+@media (max-width: 600px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .card img {
+    height: 150px;
+  }
+}
