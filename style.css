@@ -234,7 +234,30 @@ footer a {
 footer a:hover {
   color: var(--color-dorado-claro);
 }
+/* ===========================================================
+   Verificación de Identidad - Marcos Tlacaelel Rivera Campos
+   =========================================================== */
+.verificacion {
+  text-align: center;
+  margin-top: 2rem;
+}
 
+.verificacion h1 {
+  color: var(--color-azul-marino);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Tarjeta de Identidad */
+.id-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-beige);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 /* =================================================================
    MEDIA QUERIES
    ================================================================= */
