@@ -2,16 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OGUN A.C. - Contacto</title>
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="favicon.png"
-  />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+
+  <!-- Hoja de Estilos -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ENCABEZADO -->
   <header>
     <img src="logo-ogun.png" alt="Logotipo OGUN A.C." />
     <div class="hamburger">
@@ -33,51 +35,52 @@
     </nav>
   </header>
 
+  <!-- CONTENEDOR PRINCIPAL -->
   <div class="container">
-    <h1>Contacto</h1>
-    <p>
-      Si deseas mayor información, colaborar como donante o voluntario, o 
-      simplemente hacernos llegar tus comentarios, puedes comunicarte a través 
-      de nuestros canales oficiales:
-    </p>
-    <p>
-      <strong>Teléfono:</strong> (55) 8974-8690<br />
-      <strong>Correo general:</strong>
-      <a href="mailto:contacto@ogunac.org">contacto@ogunac.org</a><br />
-      <strong>Dirección:</strong> Elisa Acuña y Rossety, Mz. 172 Lt. 17, Col. Sta.
-      Martha Acatitla, Iztapalapa, CDMX.
-    </p>
-
-    <!-- Directorio de Representantes -->
-    <section>
-      <h2>Directorio</h2>
-      <ul>
-        <li>
-          <strong>Presidente y Representante Legal:</strong> 
-          Mtra. Rocío Campos Valencia <br/>
-          <em>Email:</em> 
-          <a href="mailto:rocio@ogunac.org">rocio@ogunac.org</a><br />
-        </li>
-        <li>
-          <strong>Director General:</strong> 
-          Ing. Marcos T. Rivera <br/>
-          <em>Email:</em> 
-          <a href="mailto:marcostlacaelel@ogunac.org">marcostlacaelel@ogunac.org</a><br />
-        </li>
-      </ul>
+    <section class="intro">
+      <h1>Contacto</h1>
+      <p>Para cualquier consulta o información, puedes comunicarte con nosotros a través de los siguientes medios.</p>
     </section>
 
-    <img
-      src="imagenes/contacto-map.jpg"
-      alt="Ubicación de OGUN A.C."
-      class="responsive-img"
-    />
+    <!-- DIRECTORIO -->
+    <section class="directorio">
+      <h2>📌 Directorio</h2>
+      <div class="directorio-grid">
+        <div class="persona">
+          <img src="imagenes/rocio-campos.jpg" alt="Rocío Campos Valencia" />
+          <h3>Mtra. Rocío Campos Valencia</h3>
+          <p><strong>Presidenta y Representante Legal</strong></p>
+          <p>Email: <a href="mailto:rocio@ogunac.org">rocio@ogunac.org</a></p>
+        </div>
+        <div class="persona">
+          <img src="imagenes/marcos-rivera.png" alt="Marcos Tlacaelel Rivera Campos" />
+          <h3>Ing. Marcos Tlacaelel Rivera Campos</h3>
+          <p><strong>Director General</strong></p>
+          <p>Email: <a href="mailto:marcostlacaelel@ogunac.org">marcostlacaelel@ogunac.org</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section class="ubicacion">
+      <h2>📍 Ubicación</h2>
+      <p>Nos encontramos en:</p>
+      <p><strong>Elisa Acuña y Rossety, MZ. 172 LT. 17, Col. Sta Martha Acatitla, Iztapalapa, CDMX</strong></p>
+      
+      <!-- MAPA DE GOOGLE MAPS -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.8301860298334!2d-99.01736131748245!3d19.376504235197963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e2ccc94616b9%3A0x750e160f4f5a0c69!2sOrganizaci%C3%B3n%20General%20de%20Unidad%20Nacional%20A.C.%20(OGUN)!5e0!3m2!1ses-419!2sus!4v1742286975861!5m2!1ses-419!2sus" 
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
   </div>
 
+  <!-- PIE DE PÁGINA -->
   <footer>
     <p>© 2025 OGUN A.C. - Todos los derechos reservados</p>
   </footer>
 
+  <!-- Script para menú hamburguesa -->
   <script>
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('nav ul');
@@ -85,5 +88,6 @@
       navMenu.classList.toggle('nav-open');
     });
   </script>
+
 </body>
 </html>
