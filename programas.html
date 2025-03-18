@@ -2,16 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OGUN A.C. - Programas</title>
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="favicon.png"
-  />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+
+  <!-- Hoja de Estilos -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ENCABEZADO -->
   <header>
     <img src="logo-ogun.png" alt="Logotipo OGUN A.C." />
     <div class="hamburger">
@@ -33,89 +35,98 @@
     </nav>
   </header>
 
+  <!-- CONTENEDOR PRINCIPAL -->
   <div class="container">
-    <h1>Programas y Proyectos</h1>
-    <section>
-      <h2>Talleres de Manualidades</h2>
-      <div class="flex-row">
-        <div class="flex-item">
-          <img
-            src="imagenes/programas-manualidades.jpg"
-            alt="Talleres de manualidades"
-            class="responsive-img"
-          />
-        </div>
-        <div class="flex-item">
+    <section class="intro">
+      <h1>Nuestros Programas</h1>
+      <p>
+        En OGUN A.C., diseñamos e implementamos programas que abordan diversas áreas esenciales para el desarrollo integral de comunidades vulnerables.  
+        A través de nuestras iniciativas, buscamos generar un impacto positivo y duradero.
+      </p>
+    </section>
+
+    <!-- GRID DE PROGRAMAS -->
+    <section class="programas-grid">
+      <!-- Programa 1: Educación y Capacitación -->
+      <div class="programa">
+        <img src="imagenes/programas-educacion.jpg" alt="Educación y Capacitación" />
+        <div class="programa-contenido">
+          <h2>📚 Educación y Capacitación</h2>
           <p>
-            Capacitaciones orientadas a mujeres y jóvenes para la elaboración de
-            prendas y artesanías...
+            Desarrollo de habilidades y conocimientos mediante programas de alfabetización,  
+            educación emocional y formación para el empleo.
           </p>
         </div>
       </div>
-    </section>
 
-    <section>
-      <h2>Abasto y Distribución de Alimentos</h2>
-      <div class="flex-row reverse">
-        <div class="flex-item">
+      <!-- Programa 2: Salud y Bienestar -->
+      <div class="programa">
+        <img src="imagenes/programas-salud.jpg" alt="Salud y Bienestar" />
+        <div class="programa-contenido">
+          <h2>🏥 Salud y Bienestar</h2>
           <p>
-            Semanalmente se entregan paquetes alimenticios gracias a alianzas 
-            con bancos de alimentos, mejorando la nutrición de familias.
-          </p>
-        </div>
-        <div class="flex-item">
-          <img
-            src="imagenes/programas-alimentos.jpg"
-            alt="Distribución de alimentos"
-            class="responsive-img"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Jornadas de Salud y Medicina Alternativa</h2>
-      <div class="flex-row">
-        <div class="flex-item">
-          <img
-            src="imagenes/programas-salud.jpg"
-            alt="Jornadas de salud"
-            class="responsive-img"
-          />
-        </div>
-        <div class="flex-item">
-          <p>
-            En colaboración con profesionales de la salud tradicional y alternativa,
-            ofrecemos atención integral y promoción de estilos de vida saludables.
+            Jornadas médicas gratuitas, prevención de enfermedades y acceso a terapias alternativas  
+            para comunidades con difícil acceso a servicios de salud.
           </p>
         </div>
       </div>
-    </section>
 
-    <section>
-      <h2>Músicos de Acero</h2>
-      <div class="flex-row reverse">
-        <div class="flex-item">
+      <!-- Programa 3: Desarrollo Comunitario -->
+      <div class="programa">
+        <img src="imagenes/programas-comunidad.jpg" alt="Desarrollo Comunitario" />
+        <div class="programa-contenido">
+          <h2>🏡 Desarrollo Comunitario</h2>
           <p>
-            Proyecto cultural para fomentar la expresión musical juvenil a través
-            de talleres, formación de bandas y conciertos.
+            Iniciativas para fortalecer la participación social, mejorar la infraestructura comunitaria  
+            y fomentar proyectos de autogestión económica.
           </p>
         </div>
-        <div class="flex-item">
-          <img
-            src="imagenes/programas-musicos.jpg"
-            alt="Músicos de Acero"
-            class="responsive-img"
-          />
+      </div>
+
+      <!-- Programa 4: Cultura y Arte -->
+      <div class="programa">
+        <img src="imagenes/programas-cultura.jpg" alt="Cultura y Arte" />
+        <div class="programa-contenido">
+          <h2>🎭 Cultura y Arte</h2>
+          <p>
+            Promoción del arte y la cultura a través de talleres de música, danza y teatro,  
+            incentivando la identidad y la expresión artística.
+          </p>
+        </div>
+      </div>
+
+      <!-- Programa 5: Medio Ambiente -->
+      <div class="programa">
+        <img src="imagenes/programas-medioambiente.jpg" alt="Medio Ambiente" />
+        <div class="programa-contenido">
+          <h2>🌿 Medio Ambiente</h2>
+          <p>
+            Programas de reforestación, concientización ambiental y reciclaje  
+            para fomentar la sostenibilidad en las comunidades.
+          </p>
+        </div>
+      </div>
+
+      <!-- Programa 6: Asistencia Social -->
+      <div class="programa">
+        <img src="imagenes/programas-asistencia.jpg" alt="Asistencia Social" />
+        <div class="programa-contenido">
+          <h2>❤️ Asistencia Social</h2>
+          <p>
+            Distribución de despensas, ropa y útiles escolares, así como apoyo en emergencias  
+            para mejorar la calidad de vida de familias en situación de vulnerabilidad.
+          </p>
         </div>
       </div>
     </section>
   </div>
 
+  <!-- PIE DE PÁGINA -->
   <footer>
     <p>© 2025 OGUN A.C. - Todos los derechos reservados</p>
   </footer>
 
+  <!-- Script para menú hamburguesa -->
   <script>
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('nav ul');
@@ -123,5 +134,6 @@
       navMenu.classList.toggle('nav-open');
     });
   </script>
+
 </body>
 </html>
